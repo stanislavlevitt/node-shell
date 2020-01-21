@@ -1,8 +1,8 @@
 const request = require('request');
-module.exports = (url) => {
+module.exports = (url,done) => {
 
   request(url, function (error, response, body) {
     if (error) throw error;
-    process.stdout.write(body);
+    done(body);
   });
 }
