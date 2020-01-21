@@ -1,6 +1,7 @@
 const pwd = require("./pwd")
 const ls = require("./ls")
 const cat = require("./cat")
+const curl = require('./curl')
 
 process.stdout.write('prompt > ');
 
@@ -17,6 +18,9 @@ process.stdin.on('data', (data)=> {
       break;
     case "cat":
       cat(cmd[1].trim());
+      break;
+    case "curl":
+      curl(cmd[1].trim());
       break;
     default:
       console.log("error")
