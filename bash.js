@@ -25,9 +25,6 @@ process.stdin.on('data', (data)=> {
     default:
       console.log("error")
   }
-
-  // process.stdout.write('you typed: ' + cmd);
-  process.stdout.write('\nprompt > ');
 })
 
 function done (output){
